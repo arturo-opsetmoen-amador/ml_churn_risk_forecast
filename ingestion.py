@@ -6,12 +6,38 @@ Ingestion module.
 
 import pandas as pd
 import logging
-import joblib
 from pathlib import Path
-from typing import Union, Tuple
+from typing import Union
 import json
-from datetime import datetime
 
+
+FORMAT = '%(asctime)-15s %(message)s'
+formatter = logging.Formatter(FORMAT)
+
+
+def logger(name: str, log_file: str, level:logging.INFO=logging.INFO) -> logging.Logger:
+    """
+
+    Parameters
+    ----------
+    name
+    log_file
+    level
+
+    Returns
+    -------
+
+    """
+    handler = logging.FileHandler(log_file)
+    handler.setFormatter(formatter)
+    logger_ = logging.getLogger(name)
+    logger_.setLevel(level)
+    logger_.addHandler(handler)
+
+    return logger_
+
+
+ingestion_log = logger('ingestedfiles', 'ingestedfiles.txt')
 
 with open('config.json', 'r') as f:
     config = json.load(f) 
@@ -30,22 +56,24 @@ def merge_multiple_dataframe(input_path: Union[str, Path], log_path: Union[str, 
     :param input_path: Path object from which the csv files will be ingested.
     :return: Pandas dataframe object.
     """
-    ingestion_timestmp = datetime.now().strftime('%Y-%m-%d %HH-MM-SS')
     csv_paths = list(Path(input_path).rglob('*.csv'))
+
+    ingestion_log.info(f"Files ingested from the folders: \n")
     data_frame_tot = pd.DataFrame()
     for path in csv_paths:
+        ingestion_log.info(f"Files ingested from: {path}")
         data_frame_temp = pd.read_csv(path)
+        ingestion_log.info(f"Number of rows ingested: {data_frame_temp.shape[0]}")
         data_frame_tot = pd.concat([data_frame_tot, data_frame_temp], ignore_index=True)
+
 
     num_cols = data_frame_tot.shape[1]
     num_rows = data_frame_tot.shape[0]
+    ingestion_log.info(f"Merged dataframe cols: {num_cols}")
+    ingestion_log.info(f"Merged dataframe rows: {num_rows}")
 
-    log_list = [f"Ingested csv {file_index}: {csv_paths[file_index]} with {num_cols} columns and {num_rows} rows. " \
-                f"Ingested at: {ingestion_timestmp}"
-                for file_index in range(len(csv_paths))]
 
-    Path(log_path).mkdir(parents=True, exist_ok=True)
-    joblib.dump(log_list, Path(log_path) / 'ingestedfiles.txt')
+
 
     return data_frame_tot
 
