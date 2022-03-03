@@ -1,0 +1,16 @@
+2022-03-03 22:11:47,366 Files ingested from the folders: 
+
+2022-03-03 22:11:47,366 Files ingested from: practicedata/dataset1.csv
+2022-03-03 22:11:47,368 Number of rows ingested: 17
+2022-03-03 22:11:47,368 Files ingested from: practicedata/dataset2.csv
+2022-03-03 22:11:47,369 Number of rows ingested: 19
+2022-03-03 22:11:47,369 Merged dataframe cols: 5
+2022-03-03 22:11:47,369 Merged dataframe rows: 36
+2022-03-03 22:13:40,143 Files ingested from the folders: 
+
+2022-03-03 22:13:40,143 Files ingested from: practicedata/dataset1.csv
+2022-03-03 22:13:40,144 Number of rows ingested: 17
+2022-03-03 22:13:40,145 Files ingested from: practicedata/dataset2.csv
+2022-03-03 22:13:40,146 Number of rows ingested: 19
+2022-03-03 22:13:40,146 Merged dataframe cols: 5
+2022-03-03 22:13:40,146 Merged dataframe rows: 36
