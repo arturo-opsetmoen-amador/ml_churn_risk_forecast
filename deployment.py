@@ -1,12 +1,5 @@
-from flask import Flask, session, jsonify, request
-import pandas as pd
 import shutil
-import joblib
 from pathlib import Path
-from sklearn.base import BaseEstimator
-from sklearn import metrics
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
 import json
 
 
