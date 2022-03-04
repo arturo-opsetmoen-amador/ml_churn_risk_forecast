@@ -17,7 +17,7 @@ dataset_csv_path = Path(config['output_folder_path'])
 test_data_path = Path(config['test_data_path'])
 output_model_path = Path(config['output_model_path'])
 
-scoring_log = logger('latestscore', 'latestscore.txt')
+scoring_log = logger('latestscore', output_model_path / 'latestscore.txt')
 
 
 def score_model() -> None:
