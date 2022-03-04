@@ -1,27 +1,21 @@
 from flask import Flask, session, jsonify, request
 import pandas as pd
-import numpy as np
-import pickle
 from pathlib import Path
-import os
 import joblib
-from sklearn import metrics
-from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 import json
 
 with open('config.json', 'r') as f:
     config = json.load(f)
 
-dataset_csv_path = os.path.join(config['output_folder_path'])
-model_path = os.path.join(config['output_model_path'])
+dataset_csv_path = Path(config['output_folder_path'])
+model_path = Path(config['output_model_path'])
 
 
 def train_model() -> None:
-    finaldata_path = Path(dataset_csv_path, "finaldata.csv")
+    finaldata_path = dataset_csv_path / "finaldata.csv"
     finaldata = pd.read_csv(finaldata_path)
-    model_path_ = Path(model_path)
-    model_path_.mkdir(exist_ok=True)
+    model_path.mkdir(exist_ok=True)
     x_features = finaldata.loc[:, ['number_of_employees', 'lastyear_activity', 'lastmonth_activity']].values.reshape(-1,
                                                                                                                      3)
     y_target = finaldata['exited'].values.reshape(-1, 1).ravel()
@@ -34,7 +28,7 @@ def train_model() -> None:
 
     lr_model_fit = log_reg_model.fit(x_features, y_target)
 
-    joblib.dump(lr_model_fit, f'{model_path}/trainedmodel.pkl')
+    joblib.dump(lr_model_fit, model_path / 'trainedmodel.pkl')
 
     return None
 

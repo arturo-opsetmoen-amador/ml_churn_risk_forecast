@@ -35,13 +35,14 @@ def logger(name: str, log_file: str, level: logging.INFO = logging.INFO) -> logg
     return logger_
 
 
-ingestion_log = logger('ingestedfiles', 'ingestedfiles.txt')
 
 with open('config.json', 'r') as f:
     config = json.load(f)
 
 input_folder_path = config['input_folder_path']
 output_folder_path = config['output_folder_path']
+
+ingestion_log = logger('ingestedfiles', 'ingestedfiles.txt')
 
 
 def merge_multiple_dataframe(input_path: Union[str, Path], log_path: Union[str, Path]) -> pd.DataFrame:
