@@ -4,8 +4,7 @@ import joblib
 from pathlib import Path
 from sklearn import metrics
 from ingestion import logger, FORMAT, formatter
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
+
 import json
 
 
@@ -20,7 +19,7 @@ output_model_path = Path(config['output_model_path'])
 scoring_log = logger('latestscore', output_model_path / 'latestscore.txt')
 
 
-def score_model() -> None:
+def score_model() -> float:
     """
     This function takes a trained model, loads test data, and calculates an F1 score for the model relative
      to the test data.
@@ -43,7 +42,7 @@ def score_model() -> None:
 
     scoring_log.info(f"F1 score:  {f1_score}")
 
-    return None
+    return f1_score
 
 
 if __name__ == '__main__':
