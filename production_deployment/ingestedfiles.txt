@@ -6,3 +6,59 @@
 2022-03-04 12:53:22,206 Number of rows ingested: 19
 2022-03-04 12:53:22,206 Merged dataframe cols: 5
 2022-03-04 12:53:22,206 Merged dataframe rows: 36
+2022-03-04 19:19:32,381 Files ingested from the folders: 
+
+2022-03-04 19:19:32,382 Files ingested from: practicedata/dataset1.csv
+2022-03-04 19:19:32,386 Number of rows ingested: 17
+2022-03-04 19:19:32,386 Files ingested from: practicedata/dataset2.csv
+2022-03-04 19:19:32,387 Number of rows ingested: 19
+2022-03-04 19:19:32,388 Merged dataframe cols: 5
+2022-03-04 19:19:32,388 Merged dataframe rows: 36
+2022-03-04 20:35:48,477 Files ingested from the folders: 
+
+2022-03-04 20:35:48,479 Files ingested from: practicedata/dataset1.csv
+2022-03-04 20:35:48,487 Number of rows ingested: 17
+2022-03-04 20:35:48,488 Files ingested from: practicedata/dataset2.csv
+2022-03-04 20:35:48,493 Number of rows ingested: 19
+2022-03-04 20:35:48,495 Merged dataframe cols: 5
+2022-03-04 20:35:48,495 Merged dataframe rows: 36
+2022-03-04 20:35:50,129 Files ingested from the folders: 
+
+2022-03-04 20:35:50,130 Files ingested from: practicedata/dataset1.csv
+2022-03-04 20:35:50,138 Number of rows ingested: 17
+2022-03-04 20:35:50,139 Files ingested from: practicedata/dataset2.csv
+2022-03-04 20:35:50,144 Number of rows ingested: 19
+2022-03-04 20:35:50,146 Merged dataframe cols: 5
+2022-03-04 20:35:50,146 Merged dataframe rows: 36
+2022-03-04 20:40:20,291 Files ingested from the folders: 
+
+2022-03-04 20:40:20,291 Files ingested from: sourcedata/dataset4.csv
+2022-03-04 20:40:20,293 Number of rows ingested: 15
+2022-03-04 20:40:20,293 Files ingested from: sourcedata/dataset3.csv
+2022-03-04 20:40:20,294 Number of rows ingested: 11
+2022-03-04 20:40:20,294 Merged dataframe cols: 5
+2022-03-04 20:40:20,294 Merged dataframe rows: 26
+2022-03-04 20:40:20,674 Files ingested from the folders: 
+
+2022-03-04 20:40:20,675 Files ingested from: sourcedata/dataset4.csv
+2022-03-04 20:40:20,676 Number of rows ingested: 15
+2022-03-04 20:40:20,677 Files ingested from: sourcedata/dataset3.csv
+2022-03-04 20:40:20,678 Number of rows ingested: 11
+2022-03-04 20:40:20,678 Merged dataframe cols: 5
+2022-03-04 20:40:20,678 Merged dataframe rows: 26
+2022-03-04 20:42:12,440 Files ingested from the folders: 
+
+2022-03-04 20:42:12,440 Files ingested from: sourcedata/dataset4.csv
+2022-03-04 20:42:12,442 Number of rows ingested: 15
+2022-03-04 20:42:12,442 Files ingested from: sourcedata/dataset3.csv
+2022-03-04 20:42:12,443 Number of rows ingested: 11
+2022-03-04 20:42:12,443 Merged dataframe cols: 5
+2022-03-04 20:42:12,443 Merged dataframe rows: 26
+2022-03-04 20:44:08,818 Files ingested from the folders: 
+
+2022-03-04 20:44:08,819 Files ingested from: practicedata/dataset1.csv
+2022-03-04 20:44:08,820 Number of rows ingested: 17
+2022-03-04 20:44:08,820 Files ingested from: practicedata/dataset2.csv
+2022-03-04 20:44:08,821 Number of rows ingested: 19
+2022-03-04 20:44:08,822 Merged dataframe cols: 5
+2022-03-04 20:44:08,822 Merged dataframe rows: 36

@@ -93,7 +93,11 @@ def write_data_frame(data_frame: pd.DataFrame, output_path: Union[str, Path]) ->
     data_frame.to_csv(Path(output_path) / "finaldata.csv")
 
 
-if __name__ == '__main__':
+def run_ingestion():
     data_frame = merge_multiple_dataframe(input_folder_path, output_folder_path)
     data_frame = drop_dups(data_frame)
     write_data_frame(data_frame, output_folder_path)
+
+
+if __name__ == '__main__':
+    run_ingestion()

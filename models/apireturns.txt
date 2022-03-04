@@ -1,0 +1,38 @@
+2022-03-04 20:42:24,048 Prediction response code: 200. Prediction response text: {
+  "predictions": "[0 1 1 0 1]"
+}
+
+2022-03-04 20:42:24,048 Scoring response code: 200. Prediction response text: {
+  "score": 0.3333333333333333
+}
+
+2022-03-04 20:42:24,048 Summary stats response code: 200. Prediction response text: {
+  "summary_stats": [
+    [
+      5625.923076923077, 
+      763.5384615384615, 
+      457.46153846153845, 
+      0.5
+    ], 
+    [
+      425.0, 
+      97.5, 
+      99.0, 
+      0.5
+    ], 
+    [
+      19444.774621317832, 
+      2016.6093569309696, 
+      800.6048328991891, 
+      0.5099019513592785
+    ]
+  ]
+}
+
+2022-03-04 20:42:24,048 Diagnostics response code: 200. Prediction response text: {
+  "ingest_time": "0.34291151100023853", 
+  "missing_statistics": "[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]", 
+  "outdated_pip": "b'Package    Version Latest Type\\n---------- ------- ------ -----\\npip        21.2.4  22.0.3 wheel\\nsetuptools 57.5.0  60.9.3 wheel\\nwheel      0.37.0  0.37.1 wheel\\n'", 
+  "training_time": "1.199427925999771"
+}
+

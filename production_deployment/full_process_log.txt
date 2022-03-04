@@ -1,0 +1,34 @@
+2022-03-04 18:56:39,722 New datasets found. Ingesting...
+2022-03-04 18:58:45,279 New datasets found. Ingesting...
+2022-03-04 18:58:45,296 New datasets ingested.
+2022-03-04 18:58:45,296 Training new model
+2022-03-04 18:58:45,302 Scoring new model.
+2022-03-04 18:58:45,306 New model score: {new_model_score}, Old model score: {old_model_score}
+2022-03-04 19:03:16,870 New datasets found. Ingesting...
+2022-03-04 19:03:16,874 New datasets ingested.
+2022-03-04 19:03:16,874 Training new model
+2022-03-04 19:03:16,877 Scoring new model.
+2022-03-04 19:03:16,880 New model score: {new_model_score}, Old model score: {old_model_score}
+2022-03-04 19:04:06,275 New datasets found. Ingesting...
+2022-03-04 19:04:06,279 New datasets ingested.
+2022-03-04 19:04:06,279 Training new model
+2022-03-04 19:04:06,282 Scoring new model.
+2022-03-04 19:04:06,285 New model score: 0.3333333333333333, Old model score: 0.5714285714285715
+2022-03-04 20:35:48,476 Ingested files: ['dataset1.csv', 'dataset2.csv']
+2022-03-04 20:35:48,477 New files: []
+2022-03-04 20:35:48,477 New datasets found. Ingesting...
+2022-03-04 20:35:48,504 New datasets ingested.
+2022-03-04 20:35:48,504 Training new model after new data has been found.
+2022-03-04 20:35:48,520 Model trained --> Scoring new model.
+2022-03-04 20:35:48,534 New model score: 0.5714285714285715, Old model score: 0.5714285714285715
+2022-03-04 20:35:48,535 New model saved to pickle
+2022-03-04 20:36:00,038 New diagnostics generated. New scoring report generated. Deployment successful
+2022-03-04 20:40:20,290 Ingested files: ['dataset1.csv', 'dataset2.csv', 'dataset1.csv', 'dataset2.csv', 'dataset1.csv', 'dataset2.csv']
+2022-03-04 20:40:20,291 New files: ['dataset4.csv', 'dataset3.csv']
+2022-03-04 20:40:20,291 New datasets found. Ingesting...
+2022-03-04 20:40:20,296 New datasets ingested.
+2022-03-04 20:40:20,296 Training new model after new data has been found.
+2022-03-04 20:40:20,299 Model trained --> Scoring new model.
+2022-03-04 20:40:20,302 New model score: 0.3333333333333333, Old model score: 0.5714285714285715
+2022-03-04 20:40:20,302 New model saved to pickle
+2022-03-04 20:40:29,646 New diagnostics generated. New scoring report generated. Deployment successful

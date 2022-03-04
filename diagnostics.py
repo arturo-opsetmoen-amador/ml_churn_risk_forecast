@@ -121,12 +121,22 @@ def outdated_packages_list() -> bytes:
     return pip_list_outdated
 
 
-if __name__ == '__main__':
+def run_diagnostics() -> None:
+    """
+    Run diagnostic steps
+    Returns
+    -------
+
+    """
     model_predictions(dataset_csv_path / 'finaldata.csv')
     dataframe_summary()
     missing_data()
     execution_time()
     outdated_packages_list()
+
+
+if __name__ == '__main__':
+    run_diagnostics()
 
 
 
