@@ -3,19 +3,17 @@ Author: Arturo Opsetmoen Amador.
 Ingestion module.
 """
 
-
 import pandas as pd
 import logging
 from pathlib import Path
 from typing import Union
 import json
 
-
 FORMAT = '%(asctime)-15s %(message)s'
 formatter = logging.Formatter(FORMAT)
 
 
-def logger(name: str, log_file: str, level:logging.INFO=logging.INFO) -> logging.Logger:
+def logger(name: str, log_file: str, level: logging.INFO = logging.INFO) -> logging.Logger:
     """
 
     Parameters
@@ -40,7 +38,7 @@ def logger(name: str, log_file: str, level:logging.INFO=logging.INFO) -> logging
 ingestion_log = logger('ingestedfiles', 'ingestedfiles.txt')
 
 with open('config.json', 'r') as f:
-    config = json.load(f) 
+    config = json.load(f)
 
 input_folder_path = config['input_folder_path']
 output_folder_path = config['output_folder_path']
@@ -66,14 +64,10 @@ def merge_multiple_dataframe(input_path: Union[str, Path], log_path: Union[str, 
         ingestion_log.info(f"Number of rows ingested: {data_frame_temp.shape[0]}")
         data_frame_tot = pd.concat([data_frame_tot, data_frame_temp], ignore_index=True)
 
-
     num_cols = data_frame_tot.shape[1]
     num_rows = data_frame_tot.shape[0]
     ingestion_log.info(f"Merged dataframe cols: {num_cols}")
     ingestion_log.info(f"Merged dataframe rows: {num_rows}")
-
-
-
 
     return data_frame_tot
 
